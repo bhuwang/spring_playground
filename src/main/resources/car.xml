@@ -1,0 +1,39 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="e1" class="com.bhuwan.spring.di.arrays.Engine">
+		<property name="modelYear" value="2013" />
+	</bean>
+
+	<bean id="e2" class="com.bhuwan.spring.di.arrays.Engine">
+		<property name="modelYear" value="2014" />
+	</bean>
+
+	<bean id="e3" class="com.bhuwan.spring.di.arrays.Engine">
+		<property name="modelYear" value="2015" />
+	</bean>
+
+	<bean id="e4" class="com.bhuwan.spring.di.arrays.Engine">
+		<property name="modelYear" value="2016" />
+	</bean>
+
+	<bean id="car" class="com.bhuwan.spring.di.arrays.Car">
+		<property name="carNames">
+			<list>
+				<value>Audi</value>
+				<value>Honda</value>
+				<value>Benz</value>
+				<value>Santro</value>
+			</list>
+		</property>
+
+		<property name="engines">
+			<list>
+				<ref bean="e1" />
+				<ref bean="e2" />
+				<ref bean="e3" />
+				<ref bean="e4" />
+			</list>
+		</property>
+	</bean>
+</beans>		

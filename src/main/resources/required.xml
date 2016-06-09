@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util 
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<bean id="test" class="com.bhuwan.spring.di.collections.required.Test">
+		<property name="fruits">
+			<util:list list-class="java.util.Vector" value-type="java.lang.String">
+				<value>Apple</value>
+				<value>Mango</value>
+				<value>Banana</value>
+				<value>Litchi</value>
+				<value>Apple</value>
+			</util:list>
+		</property>
+		<property name="footballers">
+			<util:set set-class="java.util.TreeSet" value-type="java.lang.String">
+				<value>Ronaldo</value>
+				<value>Messi</value>
+				<value>Roney</value>
+				<value>Neymar</value>
+				<value>Messi</value>
+				<value>Drogba</value>
+			</util:set>
+		</property>
+		<property name="countriesCapitals">
+			<util:map map-class="java.util.Hashtable" key-type="java.lang.String"
+				value-type="java.lang.String">
+				<entry key="Nepal" value="Kathmandu" />
+				<entry key="India" value="Delhi" />
+				<entry key="USA" value="Wasington" />
+				<entry key="Australia" value="Canberra" />
+				<entry key="Pakistan" value="Islamabad" />
+				<entry key="Nepal" value="Kathmandu" />
+			</util:map>
+		</property>
+	</bean>
+</beans>		

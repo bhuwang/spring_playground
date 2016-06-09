@@ -1,0 +1,33 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="collect"
+		class="com.bhuwan.spring.di.collections.InjectCollectionsDemo">
+		<property name="fruits">
+			<list>
+				<value>Apple</value>
+				<value>Mango</value>
+				<value>Banana</value>
+				<value>Apple</value>
+			</list>
+		</property>
+		<property name="footballers">
+			<set>
+				<value>Ronaldo</value>
+				<value>Messi</value>
+				<value>Roney</value>
+				<value>Neymar</value>
+				<value>Messi</value>
+			</set>
+		</property>
+		<property name="countriesCapitals">
+			<map>
+				<entry key="Nepal" value="Kathmandu" />
+				<entry key="India" value="Delhi" />
+				<entry key="USA" value="Wasington" />
+				<entry key="Australia" value="Canberra" />
+				<entry key="Nepal" value="Kathmandu" />
+			</map>
+		</property>
+	</bean>
+</beans>		
