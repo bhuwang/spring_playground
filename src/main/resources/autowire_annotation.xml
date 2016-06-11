@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context 
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util 
+  http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Activate autowire annotation -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<bean id="engineA" class="com.bhuwan.spring.di.autowire.annotation.Engine">
+		<property name="modelYear" value="2010" />
+	</bean>
+	
+	<bean id="engineB" class="com.bhuwan.spring.di.autowire.annotation.Engine">
+		<property name="modelYear" value="2011" />
+	</bean>
+
+	<bean id="c" class="com.bhuwan.spring.di.autowire.annotation.Car">
+		<property name="carName" value="Ford"></property>
+	</bean>
+
+</beans>

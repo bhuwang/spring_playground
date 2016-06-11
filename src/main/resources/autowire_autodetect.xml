@@ -1,0 +1,16 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- Constructor injection (byType internally) -->
+	<bean id="e1" class="com.bhuwan.spring.di.autowire.xml.Engine" autowire-candidate="false">
+		<property name="modelYear" value="2015"></property>
+	</bean>
+	<bean id="e2" class="com.bhuwan.spring.di.autowire.xml.Engine">
+		<property name="modelYear" value="2016"></property>
+	</bean>
+	<bean id="bus" class="com.bhuwan.spring.di.autowire.xml.Bus"
+		autowire="autodetect">
+	</bean>
+
+</beans>

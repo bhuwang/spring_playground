@@ -1,0 +1,9 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="a" class="com.bhuwan.spring.di.dependson.A" depends-on="b" />
+
+	<bean id="b" class="com.bhuwan.spring.di.dependson.B" depends-on="c" />
+
+	<bean id="c" class="com.bhuwan.spring.di.dependson.C" />
+</beans>		

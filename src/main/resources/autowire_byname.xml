@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- Start By Name -->
+	<bean id="engine" class="com.bhuwan.spring.di.autowire.xml.Engine">
+		<property name="modelYear" value="2015"></property>
+	</bean>
+
+	<bean id="engine1" class="com.bhuwan.spring.di.autowire.xml.Engine">
+		<property name="modelYear" value="2016"></property>
+	</bean>
+
+	<bean id="car" class="com.bhuwan.spring.di.autowire.xml.Car"
+		autowire="byName">
+		<property name="carName" value="Santro"></property>
+	</bean>
+	<!-- End of ByName -->
+</beans>
