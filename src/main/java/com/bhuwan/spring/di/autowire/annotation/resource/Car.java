@@ -1,10 +1,9 @@
 /**
  * 
  */
-package com.bhuwan.spring.di.autowire.annotation;
+package com.bhuwan.spring.di.autowire.annotation.resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.Resource;
 
 /**
  * @author bhuwan
@@ -15,11 +14,10 @@ public class Car {
     private String carName;
 
     /*
-     * in case of Autowired there is no need of setter or constructor
+     * in case of Resource it will autowire DI by using name
      * 
      */
-    @Autowired
-    @Qualifier(value = "engineB")
+    @Resource
     private Engine engine;
 
     public void printData() {

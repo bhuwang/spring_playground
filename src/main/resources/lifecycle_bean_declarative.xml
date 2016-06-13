@@ -1,0 +1,16 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-init-method="init" default-destroy-method="destroy">
+	<bean id="test" class="com.bhuwan.spring.lifecycle.bean.declarative.Test"
+		init-method="init" destroy-method="destroy">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/springdemo" />
+		<property name="username" value="root" />
+		<property name="password" value="liferay" />
+	</bean>
+
+	<bean id="test2" class="com.bhuwan.spring.lifecycle.bean.declarative.Test2" />
+
+	<bean id="test3" class="com.bhuwan.spring.lifecycle.bean.declarative.Test3" />
+
+</beans>		

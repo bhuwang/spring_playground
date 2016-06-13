@@ -8,20 +8,13 @@
   http://www.springframework.org/schema/util 
   http://www.springframework.org/schema/util/spring-util.xsd">
 
-
-	<!-- Activate autowire annotation -->
+	<!-- This tag will activate all the stereotype type annotations. -->
 	<context:annotation-config />
 
-	<bean id="engineA" class="com.bhuwan.spring.di.autowire.annotation.Engine">
-		<property name="modelYear" value="2010" />
-	</bean>
+	<context:component-scan base-package="com.bhuwan.spring.di.stereotype.j2ee" />
 
-	<bean id="engineB" class="com.bhuwan.spring.di.autowire.annotation.Engine">
-		<property name="modelYear" value="2011" />
-	</bean>
-
-	<bean id="car" class="com.bhuwan.spring.di.autowire.annotation.Car">
-		<property name="carName" value="Ford"></property>
+	<bean id="engine" class="com.bhuwan.spring.di.stereotype.j2ee.Engine">
+		<property name="modelYear" value="2009" />
 	</bean>
 
 </beans>

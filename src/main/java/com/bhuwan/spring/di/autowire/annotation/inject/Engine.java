@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.bhuwan.spring.di.autowire.annotation;
+package com.bhuwan.spring.di.autowire.annotation.inject;
 
 /**
  * @author bhuwan

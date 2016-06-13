@@ -1,9 +1,10 @@
 /**
  * 
  */
-package com.bhuwan.spring.di.autowire.annotation;
+package com.bhuwan.spring.di.autowire.annotation.inject;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.inject.Inject;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
@@ -15,11 +16,11 @@ public class Car {
     private String carName;
 
     /*
-     * in case of Autowired there is no need of setter or constructor
+     * in case of Inject it will autowire DI by using type
      * 
      */
-    @Autowired
-    @Qualifier(value = "engineB")
+    @Inject
+    @Qualifier("engineb")
     private Engine engine;
 
     public void printData() {

@@ -1,0 +1,10 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- for car interface lookupmethod -->
+	<bean id="bank" class="com.bhuwan.spring.di.methodreplacer.Bank">
+		<replaced-method name="calculateInterest" replacer="replacer" />
+	</bean>
+	<bean id="replacer"
+		class="com.bhuwan.spring.di.methodreplacer.CalculateInterestReplacer" />
+</beans>		

@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<!-- load properties data into IOC context scope -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="driver.properties"></property>
+	</bean>
+
+	<!-- inject IOC context scope data into required bean -->
+	<bean id="con" class="com.bhuwan.spring.di.propertiesdi.Test">
+
+		<property name="driverClass" value="${driverClass}" />
+		<property name="url" value="${url}" />
+		<property name="username" value="${username}" />
+		<property name="password" value="${password}" />
+	</bean>
+</beans>

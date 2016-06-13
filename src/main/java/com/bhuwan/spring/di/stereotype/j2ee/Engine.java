@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.bhuwan.spring.di.autowire.annotation;
+package com.bhuwan.spring.di.stereotype.j2ee;
 
 /**
  * @author bhuwan
@@ -10,10 +10,6 @@ package com.bhuwan.spring.di.autowire.annotation;
 public class Engine {
 
     private String modelYear;
-
-    public Engine() {
-        System.out.println("Engine object created successfully.");
-    }
 
     /**
      * @return the modelYear

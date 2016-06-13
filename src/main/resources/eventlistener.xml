@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="start" class="com.bhuwan.spring.eventlistener.IOCStartEventListener" />
+
+	<bean id="stop" class="com.bhuwan.spring.eventlistener.IOCStopEventListener" />
+
+	<bean id="refresh" class="com.bhuwan.spring.eventlistener.IOCRefreshEventListener" />
+
+	<bean id="close" class="com.bhuwan.spring.eventlistener.IOCCloseEventListener" />
+	
+</beans>

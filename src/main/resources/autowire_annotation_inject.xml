@@ -12,15 +12,17 @@
 	<!-- Activate autowire annotation -->
 	<context:annotation-config />
 
-	<bean id="engineA" class="com.bhuwan.spring.di.autowire.annotation.Engine">
+	<bean id="enginea"
+		class="com.bhuwan.spring.di.autowire.annotation.inject.Engine">
 		<property name="modelYear" value="2010" />
 	</bean>
 
-	<bean id="engineB" class="com.bhuwan.spring.di.autowire.annotation.Engine">
+	<bean id="engineb"
+		class="com.bhuwan.spring.di.autowire.annotation.inject.Engine">
 		<property name="modelYear" value="2011" />
 	</bean>
 
-	<bean id="car" class="com.bhuwan.spring.di.autowire.annotation.Car">
+	<bean id="car" class="com.bhuwan.spring.di.autowire.annotation.inject.Car">
 		<property name="carName" value="Ford"></property>
 	</bean>
 
